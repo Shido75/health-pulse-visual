@@ -2,8 +2,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Activity, BarChart, Heart, List, Settings, User } from "lucide-react";
+import { Activity, BarChart, Bell, Heart, List, Settings, User } from "lucide-react";
 import { SidebarProvider, Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
+import Logo from "@/components/ui/logo";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -48,8 +49,8 @@ const DashboardLayout = ({ children, className }: DashboardLayoutProps) => {
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <Sidebar className="border-r">
-          <div className="py-4 px-2 flex items-center justify-center">
-            <h1 className="text-xl font-bold text-fitness-primary">Health Pulse</h1>
+          <div className="py-6 px-4 flex items-center justify-center">
+            <Logo size="md" />
           </div>
           <SidebarContent>
             <SidebarMenu>
@@ -74,9 +75,19 @@ const DashboardLayout = ({ children, className }: DashboardLayoutProps) => {
         </Sidebar>
 
         <div className="flex-1 flex flex-col overflow-hidden">
-          <header className="border-b bg-background h-14 flex items-center px-6">
+          <header className="border-b bg-background h-16 flex items-center px-6">
             <SidebarTrigger className="mr-4" />
-            <h2 className="font-medium">Fitness Dashboard</h2>
+            <div className="flex items-center justify-between w-full">
+              <h2 className="font-medium text-lg">Fitness Dashboard</h2>
+              <div className="flex items-center gap-2">
+                <Button variant="ghost" size="icon">
+                  <Bell size={20} />
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <User size={20} />
+                </Button>
+              </div>
+            </div>
           </header>
           <main className={cn("flex-1 overflow-auto p-6", className)}>
             {children}

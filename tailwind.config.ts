@@ -19,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -66,12 +69,21 @@ export default {
 				fitness: {
 					primary: '#9b87f5',
 					secondary: '#7E69AB',
+					tertiary: '#6E59A5',
+					dark: '#1A1F2C',
+					light: '#E5DEFF',
 					steps: '#4E9BF5',
 					calories: '#F5874E',
 					distance: '#4EF58F',
-					light: '#E5DEFF',
 					gray: '#8E9196',
+					gradient: 'linear-gradient(135deg, #9b87f5, #7E69AB)'
 				}
+			},
+			backgroundImage: {
+				'fitness-gradient': 'linear-gradient(135deg, #9b87f5, #7E69AB)',
+				'steps-gradient': 'linear-gradient(135deg, #4E9BF5, #3D7AC4)',
+				'calories-gradient': 'linear-gradient(135deg, #F5874E, #E56E3D)',
+				'distance-gradient': 'linear-gradient(135deg, #4EF58F, #3DD17A)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -96,6 +108,12 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'progress-fill': 'progress-fill 1s ease-in-out forwards'
+			},
+			boxShadow: {
+				'fitness': '0 4px 14px 0 rgba(155, 135, 245, 0.2)',
+				'steps': '0 4px 14px 0 rgba(78, 155, 245, 0.2)',
+				'calories': '0 4px 14px 0 rgba(245, 135, 78, 0.2)',
+				'distance': '0 4px 14px 0 rgba(78, 245, 143, 0.2)',
 			}
 		}
 	},

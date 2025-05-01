@@ -21,9 +21,9 @@ const StatCard = ({
   iconColor = "bg-fitness-light",
 }: StatCardProps) => {
   return (
-    <Card className={cn("overflow-hidden", className)}>
+    <Card className={cn("overflow-hidden card-hover", className)}>
       <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
-        <CardTitle className="text-sm font-medium">{title}</CardTitle>
+        <CardTitle className="text-sm font-medium text-muted-foreground">{title}</CardTitle>
         <div className={cn("p-2 rounded-full", iconColor)}>
           {icon}
         </div>

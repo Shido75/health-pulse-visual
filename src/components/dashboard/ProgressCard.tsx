@@ -45,8 +45,7 @@ const ProgressCard = ({
         <div className="relative pt-1">
           <Progress 
             value={percentage} 
-            className="h-2" 
-            indicatorClassName={progressColor}
+            className={cn("h-2", progressColor)}
           />
           <div className="flex justify-end mt-1">
             <span className="text-xs font-semibold text-muted-foreground">{percentage}%</span>
