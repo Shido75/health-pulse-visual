@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Activity, BarChart, Bell, Heart, List, Settings, User } from "lucide-react";
 import { SidebarProvider, Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger } from "@/components/ui/sidebar";
 import Logo from "@/components/ui/logo";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -80,6 +81,7 @@ const DashboardLayout = ({ children, className }: DashboardLayoutProps) => {
             <div className="flex items-center justify-between w-full">
               <h2 className="font-medium text-lg">Fitness Dashboard</h2>
               <div className="flex items-center gap-2">
+                <ThemeToggle />
                 <Button variant="ghost" size="icon">
                   <Bell size={20} />
                 </Button>
